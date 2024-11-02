@@ -1,0 +1,7 @@
+.rightArrowNav {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  right: 0;
+  top: 40%;
+}

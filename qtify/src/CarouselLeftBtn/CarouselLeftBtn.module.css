@@ -1,0 +1,6 @@
+.leftArrowNav {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  top: 40%;
+}

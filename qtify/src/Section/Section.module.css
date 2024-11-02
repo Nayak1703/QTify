@@ -1,0 +1,47 @@
+/* ----- SECTION ----- */
+
+.section {
+  padding: 0 20px;
+  padding-bottom: 30px;
+}
+.sectionSongs {
+  border-top: 1px solid #34c94b;
+  border-bottom: 1px solid #34c94b;
+}
+
+/* ----- SECTION-HEADER ----- */
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionHeaderTitle,
+.sectionHeaderBtn {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.sectionHeaderBtn {
+  color: #34c94b;
+  cursor: pointer;
+}
+
+/* ----- SECTION-CARDS ----- */
+
+.cardsFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px 40px;
+  padding: 10px 20px;
+}
+
+.cardsCollapse {
+  padding: 10px 20px;
+  position: relative;
+  overflow: visible;
+}
