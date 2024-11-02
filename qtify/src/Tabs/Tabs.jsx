@@ -81,8 +81,8 @@ const TabsComponent = ({ genres, albumName, albumData }) => {
             },
           }}
           sx={{
-            ".css-cyzoxb-MuiButtonBase-root-MuiTab-root": {
-              color: "#ffffff",
+            ".MuiButtonBase-root": {
+              color: "#ffffff !important",
             },
             ".Mui-selected": {
               color: `#34c94b !important `,
