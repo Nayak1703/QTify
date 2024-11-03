@@ -4,12 +4,13 @@ import axios from "axios";
 import Navbar from "./Navbar/Navbar.jsx";
 import Hero from "./Hero/Hero.jsx";
 import Section from "./Section/Section.jsx";
+import AccordionComponent from "./Accordion/Accordion.jsx";
+import MusicPlayer from "./MusicPlayer/MusicPlayer.jsx";
 
 function App() {
   const [topAlbums, setTopAlbums] = useState([]);
   const [newAlbums, setnewAlbums] = useState([]);
   const [genres, setGenres] = useState([]);
-  const [songs, setSongs] = useState([]);
 
   const fetchingTopAlbums = async () => {
     const response = await axios.get(
@@ -48,6 +49,8 @@ function App() {
         <Section albumName={"New Albums"} albumData={newAlbums} />
         <Section albumName={"Songs"} genres={genres} />
       </div>
+      <AccordionComponent />
+      <MusicPlayer />
     </div>
   );
 }
