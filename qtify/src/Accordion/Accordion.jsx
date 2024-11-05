@@ -39,12 +39,12 @@ const AccordionComponent = () => {
                   className={styles.accordSummary}
                 >
                   <Typography className={styles.accordQues}>
-                    {faq.question}
+                    {faq.question.replace("QTify", "Vibezz")}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={styles.accordDetails}>
                   <Typography className={styles.accordAns}>
-                    {faq.answer}
+                    {faq.answer.replace("QTify", "Vibezz")}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -64,12 +64,12 @@ const AccordionComponent = () => {
                   className={styles.accordSummary}
                 >
                   <Typography className={styles.accordQues}>
-                    {faq.question}
+                    {faq.question.replace("QTify", "Vibezz")}
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={styles.accordDetails}>
                   <Typography className={styles.accordAns}>
-                    {faq.answer}
+                    {faq.answer.replace("QTify", "Vibezz")}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
