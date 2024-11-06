@@ -114,9 +114,9 @@ const MusicPlayer = () => {
     };
     audioRef.current.addEventListener("loadedmetadata", handleFirstLoad);
 
-    return () => {
-      audioRef.current.removeEventListener("loadedmetadata", handleFirstLoad);
-    };
+    // return () => {
+    //   audioRef.current.removeEventListener("loadedmetadata", handleFirstLoad);
+    // };
   }, []);
 
   useEffect(() => {
@@ -139,9 +139,9 @@ const MusicPlayer = () => {
     };
     audioRef.current.addEventListener("ended", handleSongEnd);
 
-    return () => {
-      audioRef.current.removeEventListener("ended", handleSongEnd);
-    };
+    // return () => {
+    //   audioRef.current.removeEventListener("ended", handleSongEnd);
+    // };
   });
 
   return (

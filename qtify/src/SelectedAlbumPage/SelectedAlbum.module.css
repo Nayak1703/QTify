@@ -1,0 +1,109 @@
+.albumPage {
+  box-sizing: border-box;
+  padding: 20px 40px;
+  width: 100%;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.backBtn {
+  text-decoration: none;
+  color: #ffffff;
+}
+.backBtn:hover {
+  color: #34c94b;
+}
+
+.albumBannerContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+}
+
+.albumBannerMedia {
+  width: 25%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: -3px 3px 2px #34c94b;
+}
+.albumBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.albumBannerDetails {
+  width: 75%;
+}
+.albumTitle {
+  border-bottom: 1px solid #34c94b;
+}
+.albumInfo {
+  opacity: 0.8;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.albumBannerBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* PAGINATION */
+.albumPagination {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+
+/* TABLE */
+.albumSongsByPage {
+  padding-top: 50px;
+}
+
+.albumSongTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.albumSongTBodyRow {
+  border-top: 1px solid #34c94b;
+}
+
+.songImgTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.songImgParent {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.songImg {
+  width: 100%;
+  height: 100%;
+}
+
+.albumTableBody {
+  font-size: 14px;
+  font-weight: 400;
+}
+.albumTableHead {
+  font-size: 16px;
+}
+.albumSongTBodyRow {
+  height: 70px;
+}
