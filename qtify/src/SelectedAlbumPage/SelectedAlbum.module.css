@@ -27,8 +27,8 @@
 }
 
 .albumBannerMedia {
-  width: 25%;
-  height: 100%;
+  width: 30%;
+  height: 90%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: -3px 3px 2px #34c94b;
@@ -40,7 +40,7 @@
 }
 
 .albumBannerDetails {
-  width: 75%;
+  width: 70%;
 }
 .albumTitle {
   border-bottom: 1px solid #34c94b;

@@ -5,6 +5,7 @@ import Hero from "../Hero/Hero.jsx";
 import Section from "../Section/Section.jsx";
 import AccordionComponent from "../Accordion/Accordion.jsx";
 import MusicPlayer from "../MusicPlayer/MusicPlayer.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 const LandingPage = ({ searchData, topAlbums, newAlbums, genres }) => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = ({ searchData, topAlbums, newAlbums, genres }) => {
       </div>
       <AccordionComponent />
       <MusicPlayer />
+      <Footer />
     </>
   );
 };

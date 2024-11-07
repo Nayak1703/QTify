@@ -11,9 +11,9 @@ import Pagination from "@mui/material/Pagination";
 import { ReactComponent as ShuffleIcon } from "../assets/shuffleBtn.svg";
 import { ReactComponent as AddToLibIcon } from "../assets/addToLibBtn.svg";
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
-import { Scale, Transform } from "@mui/icons-material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import Footer from "../Footer/Footer";
 
 const SelectedAlbum = ({ searchData }) => {
   const { albumName } = useParams();
@@ -245,6 +245,7 @@ const SelectedAlbum = ({ searchData }) => {
         </div>
       </div>
       <MusicPlayer />
+      <Footer />
     </>
   );
 };
