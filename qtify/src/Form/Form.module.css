@@ -1,0 +1,48 @@
+.formParent {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #121212;
+  text-align: center;
+  width: 100%;
+}
+
+.formHeading {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.form {
+  width: 100%;
+}
+.inputFiled {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid #34c94b;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  color: #121212;
+}
+
+.inputSubmit {
+  height: 47px;
+  border-radius: 12px;
+  border: 1px solid #121212;
+  padding: 10px 16px;
+  background-color: #34c94b;
+  color: #121212;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.25px;
+}
+
+.inputSubmit:hover {
+  background-color: #95e6a1;
+}

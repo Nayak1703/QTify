@@ -1,6 +1,6 @@
 .hero {
   background-color: #121212;
-  height: 270px;
+  min-height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +9,19 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  padding: 20px;
+}
+
+img {
+  width: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  img {
+    width: 200px;
+  }
 }

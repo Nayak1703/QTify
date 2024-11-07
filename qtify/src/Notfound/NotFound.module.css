@@ -1,0 +1,31 @@
+.parent {
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.heading {
+  padding-bottom: 30px;
+}
+
+.btn {
+  height: 47px;
+  border-radius: 12px;
+  border: 1px solid #121212;
+  padding: 10px 16px;
+  background-color: #34c94b;
+  color: #121212;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.25px;
+}
+
+.btn:hover {
+  background-color: #95e6a1;
+}

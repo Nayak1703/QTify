@@ -1,8 +1,22 @@
 .navbar {
   background-color: #34c94b;
-  height: 74px;
-  padding: 0px 32px;
+  min-height: 60px;
+  padding: 5px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  row-gap: 15px;
+  column-gap: 30px;
+}
+
+.logoImg {
+  min-width: 100px;
+  height: 60px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
 }

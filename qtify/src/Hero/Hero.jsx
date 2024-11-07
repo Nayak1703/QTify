@@ -9,11 +9,7 @@ function Hero() {
         <h1>Over thousands podcast episodes</h1>
       </div>
       <div>
-        <img
-          src={require("../assets/hero_headphones.png")}
-          width={212}
-          alt="headphones"
-        />
+        <img src={require("../assets/hero_headphones.png")} alt="headphones" />
       </div>
     </div>
   );

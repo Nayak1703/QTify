@@ -1,40 +1,21 @@
-.search {
-  box-sizing: border-box;
-  padding: 14px 20px;
-  height: 100%;
-  border-radius: 8px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 1px solid #121212;
-  width: 502px;
+.searchInput {
+  width: 60%;
 }
-
 .wrapper {
-  display: flex;
-  align-items: stretch;
-  height: 48px;
+  width: 100%;
 }
 
+.inputFieldBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .searchButton {
-  border-radius: 0px 8px 8px 0px;
-  padding: 14px 20px;
-  height: 100%;
-  border: 1px solid #121212;
-  border-left: none;
+  width: 100%;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
-  height: 100%;
 }
-
-.listElement {
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.albumTitle {
-  font-size: 16px;
-}
-
-.albumArtists {
-  font-size: 12px;
+.customAutoComplete {
+  padding: 0;
 }

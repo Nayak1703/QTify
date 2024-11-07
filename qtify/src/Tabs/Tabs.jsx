@@ -74,6 +74,9 @@ const TabsComponent = ({ genres, albumName, albumData }) => {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          variant="scrollable"
+          scrollButtons
+          allowScrollButtonsMobile
           TabIndicatorProps={{
             style: {
               backgroundColor: "#34c94b",
@@ -93,12 +96,12 @@ const TabsComponent = ({ genres, albumName, albumData }) => {
             label="All"
             {...a11yProps(0)}
             className={styles.customTabs}
-            sx={{ textTransform: "none" }}
+            sx={{ textTransform: "none", xs: { p: "0" } }}
           />
           {genres.map((genre, index) => (
             <Tab
               key={index}
-              sx={{ textTransform: "none" }}
+              sx={{ textTransform: "none", width: { xs: "0" } }}
               label={genre.label}
               {...a11yProps(index + 1)}
               className={styles.customTabs}

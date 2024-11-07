@@ -5,7 +5,9 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
-
+.backBtnParent {
+  padding-bottom: 40px;
+}
 .backBtn {
   text-decoration: none;
   color: #ffffff;
@@ -15,18 +17,18 @@
 }
 
 .albumBannerContent {
+  box-sizing: border-box;
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 40px;
+  gap: 10px 40px;
   width: 100%;
   height: 400px;
-  padding: 10px;
 }
 
 .albumBannerMedia {
   width: 25%;
-  height: 90%;
+  height: 100%;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: -3px 3px 2px #34c94b;
@@ -36,6 +38,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 .albumBannerDetails {
   width: 75%;
 }
@@ -57,7 +60,7 @@
 
 /* PAGINATION */
 .albumPagination {
-  padding-top: 20px;
+  padding-top: 60px;
   display: flex;
   justify-content: flex-end;
   color: #ffffff;
@@ -69,6 +72,7 @@
 }
 
 .albumSongTable {
+  box-sizing: border-box;
   width: 100%;
   border-collapse: collapse;
 }
@@ -89,12 +93,13 @@
   width: 50px;
   height: 50px;
   border-radius: 5px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .songImg {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .albumTableBody {
@@ -102,8 +107,41 @@
   font-weight: 400;
 }
 .albumTableHead {
+  width: 100%;
   font-size: 16px;
+  text-align: left;
 }
 .albumSongTBodyRow {
   height: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  .albumPage {
+    padding: 10px;
+  }
+  .backBtnParent {
+    padding-bottom: 30px;
+  }
+  .albumBannerContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .albumBannerMedia {
+    width: 70%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .albumBannerDetails {
+    width: 100%;
+  }
+
+  .albumSongTheadRow {
+    font-size: 14px;
+  }
+  .albumTableBody {
+    font-size: 12px;
+  }
 }

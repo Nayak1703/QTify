@@ -1,5 +1,11 @@
 .faqParent {
+  box-sizing: border-box;
   padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .faqHeading {
   text-align: center;
@@ -12,9 +18,6 @@
   margin-bottom: 20px !important;
   border: 1px solid #ffffff !important;
   border-radius: 10px !important;
-}
-.faqs {
-  padding: 0 150px;
 }
 .accordSummary {
   background-color: #121212 !important;
@@ -36,4 +39,9 @@
 }
 .accordExpandSymbol {
   transform: scale(1.5);
+}
+@media screen and (min-width: 600px) {
+  .faqParent {
+    padding: 0 100px;
+  }
 }

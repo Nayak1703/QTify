@@ -37,11 +37,16 @@
   justify-content: center;
   align-items: center;
   gap: 30px 40px;
-  padding: 10px 20px;
 }
 
 .cardsCollapse {
   padding: 10px 20px;
   position: relative;
   overflow: visible;
+}
+
+@media screen and (max-width: 600px) {
+  .cardsFlex {
+    gap: 30px 15px;
+  }
 }

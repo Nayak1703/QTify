@@ -11,8 +11,11 @@ import Pagination from "@mui/material/Pagination";
 import { ReactComponent as ShuffleIcon } from "../assets/shuffleBtn.svg";
 import { ReactComponent as AddToLibIcon } from "../assets/addToLibBtn.svg";
 import MusicPlayer from "../MusicPlayer/MusicPlayer";
+import { Scale, Transform } from "@mui/icons-material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
-const SelectedAlbum = () => {
+const SelectedAlbum = ({ searchData }) => {
   const { albumName } = useParams();
   const [albumData, setAlbumData] = useState({});
   const [albumDetails, setAlbumDetails] = useState({
@@ -24,10 +27,12 @@ const SelectedAlbum = () => {
 
   const [selectedPage, setSelectedPage] = React.useState(1);
   const handlePageChange = (event, value) => {
-    console.log(value);
     setSelectedPage(value);
     getSongListByPage(value, albumData);
   };
+
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
 
   const fetchingSongs = async () => {
     const response = await axios.get(
@@ -81,7 +86,7 @@ const SelectedAlbum = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar searchData={searchData} />
       <div className={styles.albumPage}>
         <div className={styles.albumBanner}>
           <div className={styles.backBtnParent}>
@@ -134,7 +139,7 @@ const SelectedAlbum = () => {
                     fontWeight: 600,
                     fontFamily: "Poppins, sans-serif",
                     textTransform: "none",
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     letterSpacing: "1px",
                     "&:hover": {
                       backgroundColor: "#059c11",
@@ -154,8 +159,9 @@ const SelectedAlbum = () => {
                     fontFamily: "Poppins, sans-serif",
                     borderColor: "#34c94b",
                     textTransform: "none",
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     letterSpacing: "1px",
+                    lineHeight: "1.2",
                   }}
                   startIcon={<AddToLibIcon />}
                 >
@@ -170,6 +176,7 @@ const SelectedAlbum = () => {
             count={Math.ceil(albumDetails.songNum / 7)}
             page={selectedPage}
             onChange={handlePageChange}
+            size={isXs ? "small" : ""}
             sx={{
               "& .MuiButtonBase-root, .MuiPaginationItem-ellipsis": {
                 color: "#ffffff",
@@ -185,16 +192,27 @@ const SelectedAlbum = () => {
           <table className={styles.albumSongTable}>
             <thead className={styles.albumTableHead}>
               <tr className={styles.albumSongTheadRow}>
-                <th className={styles.albumSongHead}>Title</th>
-                <th className={styles.albumSongHead}>Artist</th>
-                <th className={styles.albumSongHead}>Duration</th>
-                <th className={styles.albumSongHead}>Likes</th>
+                <th className={styles.albumSongHead} style={{ width: "40%" }}>
+                  Title
+                </th>
+                <th className={styles.albumSongHead} style={{ width: "30%" }}>
+                  Artist
+                </th>
+                <th className={styles.albumSongHead} style={{ width: "15%" }}>
+                  Duration
+                </th>
+                <th className={styles.albumSongHead} style={{ width: "15%" }}>
+                  Likes
+                </th>
               </tr>
             </thead>
             <tbody className={styles.albumTableBody}>
               {songListByPage.map((song, index) => (
                 <tr key={index} className={styles.albumSongTBodyRow}>
-                  <td className={styles.songImgTitleParent}>
+                  <td
+                    className={styles.songImgTitleParent}
+                    style={{ width: "40%" }}
+                  >
                     <div className={styles.songImgTitle}>
                       <div className={styles.songImgParent}>
                         <img
@@ -208,15 +226,15 @@ const SelectedAlbum = () => {
                       </div>
                     </div>
                   </td>
-                  <td className={styles.songArtist}>
+                  <td className={styles.songArtist} style={{ width: "30%" }}>
                     {song.artists.length > 1
                       ? song.artists.join(", ")
                       : song.artists[0]}
                   </td>
-                  <td className={styles.songDuration}>
+                  <td className={styles.songDuration} style={{ width: "15%" }}>
                     {calculateTime(song.durationInMs)}
                   </td>
-                  <td className={styles.songLikes}>
+                  <td className={styles.songLikes} style={{ width: "15%" }}>
                     <ThumbUpIcon sx={{ width: "15px", height: "15px" }} />{" "}
                     {song.likes}
                   </td>
