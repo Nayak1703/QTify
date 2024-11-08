@@ -81,4 +81,4 @@ const Card = ({ img, chipData, title, altName, totalSongNum, artist }) => {
   );
 };
 
-export default Card;
+export default React.memo(Card);

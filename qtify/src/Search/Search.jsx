@@ -9,18 +9,14 @@ import { ReactComponent as SearchIcon } from "../assets/search-icon.svg";
 
 function Search({ searchData, placeholder }) {
   let navigate = useNavigate();
-  useEffect(() => {
-    console.log(searchData);
-  }, [searchData]);
+  useEffect(() => {}, [searchData]);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const goToAlbum = (e) => {
     const searchAlbumName = e.target[0].value
       .toLowerCase()
       .split(" ")
       .join("-");
-
-    navigate(`/album/${searchAlbumName}`);
+    navigate(`/album/${searchAlbumName}`, { replace: true });
   };
 
   const [enterData, setEnterData] = useState("");
@@ -33,7 +29,8 @@ function Search({ searchData, placeholder }) {
       <form
         className={styles.wrapper}
         onSubmit={(e) => {
-          onSubmit(e);
+          e.preventDefault();
+          goToAlbum(e);
         }}
       >
         <div className={styles.inputFieldBtn}>
@@ -137,4 +134,4 @@ function Search({ searchData, placeholder }) {
   );
 }
 
-export default Search;
+export default React.memo(Search);

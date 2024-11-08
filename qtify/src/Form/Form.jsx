@@ -53,7 +53,7 @@ const FormComponent = ({ handleClose }) => {
           onInput={handleSubject}
           className={styles.inputFiled}
         />
-        <textArea
+        <textarea
           rows="4"
           name="description"
           placeholder="Description"
@@ -69,4 +69,4 @@ const FormComponent = ({ handleClose }) => {
   );
 };
 
-export default FormComponent;
+export default React.memo(FormComponent);

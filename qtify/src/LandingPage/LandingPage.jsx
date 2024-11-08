@@ -24,4 +24,4 @@ const LandingPage = ({ searchData, topAlbums, newAlbums, genres }) => {
   );
 };
 
-export default LandingPage;
+export default React.memo(LandingPage);

@@ -23,4 +23,4 @@ const CarouselLeftBtn = () => {
   );
 };
 
-export default CarouselLeftBtn;
+export default React.memo(CarouselLeftBtn);

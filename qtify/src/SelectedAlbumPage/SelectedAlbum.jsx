@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import axios from "axios";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
@@ -16,6 +16,7 @@ import { useTheme } from "@mui/material/styles";
 import Footer from "../Footer/Footer";
 
 const SelectedAlbum = ({ searchData }) => {
+  let navigate = useNavigate();
   const { albumName } = useParams();
   const [albumData, setAlbumData] = useState({});
   const [albumDetails, setAlbumDetails] = useState({
@@ -34,7 +35,7 @@ const SelectedAlbum = ({ searchData }) => {
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const fetchingSongs = async () => {
+  const fetchingSongs = async (albumName) => {
     const response = await axios.get(
       `https://qtify-backend-labs.crio.do/album/${albumName}`
     );
@@ -52,6 +53,7 @@ const SelectedAlbum = ({ searchData }) => {
 
   const getAlbumInfo = (songData) => {
     const songNum = songData.songs.length;
+
     const totalTimeInMs = songData.songs.reduce(
       (total, song) => total + song.durationInMs,
       0
@@ -77,12 +79,16 @@ const SelectedAlbum = ({ searchData }) => {
 
   useEffect(() => {
     const handleOnLoad = async () => {
-      const songData = await fetchingSongs();
-      await getAlbumInfo(songData);
-      await getSongListByPage(1, songData);
+      try {
+        const songData = await fetchingSongs(albumName);
+        await getAlbumInfo(songData);
+        await getSongListByPage(selectedPage, songData);
+      } catch (error) {
+        navigate("/not-found", { replace: true });
+      }
     };
     handleOnLoad();
-  }, []);
+  }, [albumName]);
 
   return (
     <>
@@ -250,4 +256,4 @@ const SelectedAlbum = ({ searchData }) => {
   );
 };
 
-export default SelectedAlbum;
+export default React.memo(SelectedAlbum);

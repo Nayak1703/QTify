@@ -21,7 +21,7 @@ const style = {
 const ModalComponent = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = React.useCallback(() => setOpen(false), [open]);
 
   return (
     <div>
@@ -48,4 +48,4 @@ const ModalComponent = () => {
     </div>
   );
 };
-export default ModalComponent;
+export default React.memo(ModalComponent);

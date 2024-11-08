@@ -80,4 +80,4 @@ const AccordionComponent = () => {
   );
 };
 
-export default AccordionComponent;
+export default React.memo(AccordionComponent);

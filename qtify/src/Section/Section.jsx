@@ -21,11 +21,7 @@ const Section = ({ albumName, albumData, genres }) => {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionHeaderTitle}>{albumName}</h2>
           </div>
-          <TabsComponent
-            genres={genres}
-            albumName={albumName}
-            albumData={albumData}
-          />
+          <TabsComponent genres={genres} albumName={albumName} />
         </>
       ) : (
         <>
@@ -71,4 +67,4 @@ const Section = ({ albumName, albumData, genres }) => {
   );
 };
 
-export default Section;
+export default React.memo(Section);

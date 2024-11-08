@@ -293,4 +293,4 @@ const MusicPlayer = () => {
   );
 };
 
-export default MusicPlayer;
+export default React.memo(MusicPlayer);

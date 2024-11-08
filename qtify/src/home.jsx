@@ -63,6 +63,7 @@ const Home = () => {
         path="/album/:albumName"
         element={<SelectedAlbum searchData={searchData} />}
       />
+      <Route exact path="/not-found" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -51,4 +51,4 @@ const Carousel = ({ albumData, albumType }) => {
   );
 };
 
-export default Carousel;
+export default React.memo(Carousel);

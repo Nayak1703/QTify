@@ -36,7 +36,7 @@ function a11yProps(index) {
   };
 }
 
-const TabsComponent = ({ genres, albumName, albumData }) => {
+const TabsComponent = ({ genres, albumName }) => {
   const [value, setValue] = React.useState(0);
   const [songsData, setSongData] = React.useState([]);
   const [FiltersongsData, setFilterSongData] = React.useState([]);
@@ -122,4 +122,4 @@ const TabsComponent = ({ genres, albumName, albumData }) => {
   );
 };
 
-export default TabsComponent;
+export default React.memo(TabsComponent);
